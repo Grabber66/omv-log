@@ -36,7 +36,7 @@ Ext.define("OMV.module.admin.diagnostic.log.plugin.tvheadend", {
 	id: "tvheadend",
 	text: _("tvheadend"),
 	stateful: true,
-	stateId: "8779c5e8-cf69-441a-8c9f-93259362f2fb",
+	stateId: "7ec7fd4b-5b62-47fb-bd4a-aeb0e134f748",
 	columns: [{
 		text: _("Date & Time"),
 		sortable: true,
