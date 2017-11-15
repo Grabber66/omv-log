@@ -26,7 +26,7 @@
  * @derived OMV.module.admin.diagnostic.log.plugin.Plugin
  * Class that implements the 'tvheadend' logfile diagnostics plugin.
  */
-Ext.define("OMV.module.admin.diagnostic.log.plugin.tvheadend", {
+Ext.define("OMV.module.admin.diagnostic.log.plugin.TvHeadend", {
 	extend: "OMV.module.admin.diagnostic.log.plugin.Plugin",
 	alias: "omv.plugin.diagnostic.log.tvheadend",
 	requires: [
@@ -34,7 +34,7 @@ Ext.define("OMV.module.admin.diagnostic.log.plugin.tvheadend", {
 	],
 
 	id: "tvheadend",
-	text: _("tvheadend"),
+	text: _("TvHeadend"),
 	stateful: true,
 	stateId: "7ec7fd4b-5b62-47fb-bd4a-aeb0e134f748",
 	columns: [{
@@ -61,7 +61,7 @@ Ext.define("OMV.module.admin.diagnostic.log.plugin.tvheadend", {
 		flex: 1
 	}],
 	rpcParams: {
-		id: "tvheadend"
+		id: "messages"
 	},
 	rpcFields: [
 		{ name: "rownum", type: "int" },
