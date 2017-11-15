@@ -61,7 +61,7 @@ Ext.define("OMV.module.admin.diagnostic.log.plugin.TvHeadend", {
 		flex: 1
 	}],
 	rpcParams: {
-		id: "messages"
+		id: "tvheadend"
 	},
 	rpcFields: [
 		{ name: "rownum", type: "int" },
