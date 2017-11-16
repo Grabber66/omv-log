@@ -21,14 +21,14 @@
 // require("js/omv/PluginManager.js")
 // require("js/omv/module/admin/diagnostic/log/plugin/Plugin.js")
 
-Ext.define("OMV.module.admin.diagnostic.log.plugin.AutoShutdown", {
+Ext.define("OMV.module.admin.diagnostic.log.plugin.tv", {
     extend : "OMV.module.admin.diagnostic.log.plugin.Plugin",
-    alias  : "omv.plugin.diagnostic.log.autoshutdown",
+    alias  : "omv.plugin.diagnostic.log.tv",
 
-    id       : "autoshutdown",
+    id       : "tv",
     text     : _("TvHeadend"),
     stateful : true,
-    stateId  : "92a5f193-e76a-481e-a1c0-12db308c97c0",
+    stateId  : "bcaee373-3d64-481b-b921-5264064634b3",
     columns  : [{
         text      : _("Date & Time"),
         sortable  : true,
@@ -49,7 +49,7 @@ Ext.define("OMV.module.admin.diagnostic.log.plugin.AutoShutdown", {
         flex      : 1
     }],
     rpcParams : {
-        id : "autoshutdown"
+        id : "tv"
     },
     rpcFields : [
         { name : "date", type : "string" },
