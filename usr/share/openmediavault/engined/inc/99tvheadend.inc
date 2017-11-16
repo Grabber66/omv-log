@@ -17,10 +17,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
  require_once("openmediavault/functions.inc");
-\OMV\System\LogFileSpec::registerSpecification("autoshutdown", [
+\OMV\System\LogFileSpec::registerSpecification("tv", [
     "filename" => "tvheadend.log",
     "filepath" => "/var/log/tvheadend.log",
-    "regex"    => "/^(\S+\s+\d+\s+\S+)\s+.*\s+logger:\s+\S+:\s+(\S+):\s+(.*)$/",
+    "regex" => "/^(\S+\s+\d+\s+\S+)\s+(\S+)\s+(.*)$/",
     "columns"  => [
         "date"  => [
             "index" => 1,
