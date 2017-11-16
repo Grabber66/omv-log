@@ -3,17 +3,18 @@ If you want to display additional custom log files in the WebGUI at 'Diagnostics
 Create a file called 99mylogspecs.inc in /usr/share/openmediavault/engined/inc. Here you can add your log file specifications.
 
 The description of the structure can be found here: 
+
 https://github.com/openmediavault/openmediavault/blob/master/deb/openmediavault/usr/share/php/openmediavault/system/logfilespec.inc
 
 The first argument of the registerSpecification must be a unique identifier. 
 This must be used later in the JavaScript code, too.
 To take your changes into action you simply have to restart the OMV engine.
 
-# monit restart omv-engined
+-> monit restart omv-engined
 
 During development you should manually start the engine to see if there are any errors. They will be displayed immediatelly.
 
-# omv-engined -d -f
+-> omv-engined -d -f
 
 To display the log file in the WebUI, you have to add a JavaScript file at 
 /var/www/openmediavault/js/omv/module/admin/diagnostic/log/plugin
