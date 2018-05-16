@@ -1,8 +1,8 @@
 <?php
 require_once("openmediavault/functions.inc");
-\OMV\System\LogFileSpec::registerSpecification("clamav", [
-  "filename" => "clamav",
-  "filepath" => "/var/log/clamav/clamav.log",
+\OMV\System\LogFileSpec::registerSpecification("tvheadend", [
+  "filename" => "tvheadend",
+  "filepath" => "/var/log/tvheadend.log",
   "regex" => "/^(\S+\s+\S+\s+\d+\s+\S+\s+\d+)\s+->\s+(.*)$/",
   "columns" => [
 	  "ts" => [
