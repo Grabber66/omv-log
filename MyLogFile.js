@@ -1,48 +1,39 @@
 // require("js/omv/grid/column/WhiteSpace.js")
 // require("js/omv/module/admin/diagnostic/log/plugin/Plugin.js")
 
-Ext.define("OMV.module.admin.diagnostic.log.plugin.ftp.Syslog", {
-	extend: "OMV.module.admin.diagnostic.log.plugin.Plugin",
-	alias: "omv.plugin.diagnostic.log.ftp.syslog",
-	requires: [
-		"OMV.grid.column.WhiteSpace"
-	],
+Ext.define("OMV.module.admin.diagnostic.log.plugin.tvheadend", {
+    extend : "OMV.module.admin.diagnostic.log.plugin.Plugin",
+    alias  : "omv.plugin.diagnostic.log.tvheadend",
 
-	id: "proftpd",
-	text: _("FTP"),
-	stateful: true,
-	stateId: "da26708e-9212-11e6-8222-0002b3a176b4",
-	isLogDeletable: false,
-	columns: [{
-		text: _("Date & Time"),
-		sortable: true,
-		dataIndex: "rownum",
-		stateId: "date",
-		renderer: function(value, metaData, record) {
-			return record.get("date");
-		}
-	},{
-		text: _("Hostname"),
-		hidden: true,
-		sortable: true,
-		dataIndex: "hostname",
-		stateId: "hostname"
-	},{
-		xtype: "whitespacecolumn",
-		text: _("Message"),
-		sortable: true,
-		dataIndex: "message",
-		stateId: "message",
-		flex: 1
-	}],
-	rpcParams: {
-		id: "proftpd"
-	},
-	rpcFields: [
-		{ name: "rownum", type: "int" },
-		{ name: "ts", type: "int" },
-		{ name: "date", type: "string" },
-		{ name: "hostname", type: "string" },
-		{ name: "message", type: "string" }
-	]
+    id       : "tvheadend",
+    text     : _("TvHeadend"),
+    stateful : true,
+    stateId  : "bcaee373-3d64-481b-b921-5264064634b3",
+    columns  : [{
+        text      : _("Date & Time"),
+        sortable  : true,
+        dataIndex : "date",
+        stateId   : "date",
+        renderer  : OMV.util.Format.localeTimeRenderer()
+    },{
+        text      : _("Type"),
+        sortable  : true,
+        dataIndex : "type",
+        stateId   : "type",
+        flex      : 1
+    },{
+        text      : _("Log"),
+        sortable  : true,
+        dataIndex : "log",
+        stateId   : "log",
+        flex      : 1
+    }],
+    rpcParams : {
+        id : "tv"
+    },
+    rpcFields : [
+        { name : "date", type : "string" },
+        { name : "type", type : "string" },
+        { name : "log", type : "string" }
+    ]
 });
